@@ -13,7 +13,6 @@ develop-eggs/
 downloads/
 eggs/
 .eggs/
-*.egg-info
 lib/
 lib64/
 parts/
@@ -105,7 +104,6 @@ celerybeat.pid
 .venv
 env/
 myvenv/
-autoenv
 ENV/
 env.bak/
 venv.bak/
