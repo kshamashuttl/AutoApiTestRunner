@@ -1,6 +1,6 @@
 import requests
 import click
-import config
+from AutoApiTestRunner import config
 import json
 
 
