@@ -1,6 +1,4 @@
 setup.py
-AutoApiTestRunner/__init__.py
-AutoApiTestRunner/config.py
 AutoApiTestRunner.egg-info/PKG-INFO
 AutoApiTestRunner.egg-info/SOURCES.txt
 AutoApiTestRunner.egg-info/dependency_links.txt
