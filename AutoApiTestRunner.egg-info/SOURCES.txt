@@ -1,3 +1,4 @@
+AutoApiTestRunner.py
 setup.py
 AutoApiTestRunner.egg-info/PKG-INFO
 AutoApiTestRunner.egg-info/SOURCES.txt
