@@ -1,6 +1,6 @@
 import requests
 import click
-import config
+import AutoApiTestRunner.config
 import json
 
 
@@ -41,10 +41,10 @@ def runner(repo_name, branch):
     print("repo_name:" + repo_name)
     print("branch:" + branch)
     response = requests.post(
-        config.drone_host + 'api/repos/' + config.github_org + '/{}/builds?branch={}'.format(repo_name, branch),
-        auth=BearerAuth(config.drone_token)).json()
+        AutoApiTestRunner.config.drone_host + 'api/repos/' + AutoApiTestRunner.config.github_org + '/{}/builds?branch={}'.format(repo_name, branch),
+        auth=BearerAuth(AutoApiTestRunner.config.drone_token)).json()
     print(json.dumps(response, indent=3))
-    print(config.drone_host + '/' + config.github_org + '/' + repo_name + '/' + response['number'])
+    print(AutoApiTestRunner.config.drone_host + '/' + AutoApiTestRunner.config.github_org + '/' + repo_name + '/' + response['number'])
 
 
 @cli.command()
@@ -78,19 +78,19 @@ def init(
     click.echo(
         "Saving config"
     )
-    if not config.exists():
+    if not AutoApiTestRunner.config.exists():
         click.echo("Creating a new config file")
     else:
         click.echo("Config file for AutoApiTestRunner already exists")
 
-        for key, val in config:
+        for key, val in AutoApiTestRunner.config:
             click.echo("{:>20}: {}".format(key, val))
 
     confirmed = click.confirm(
         "Do you want to save current configuration", prompt_suffix="?"
     )
     if confirmed:
-        config.update(
+        AutoApiTestRunner.config.update(
             drone_host=drone_host,
             drone_token=drone_token,
             full_name=full_name,

@@ -1,5 +1,5 @@
 #!/Users/admin/Desktop/testSSH/AutoApiTestRunner/autoenv/bin/python
-# EASY-INSTALL-ENTRY-SCRIPT: 'AutoApiTestRunner','console_scripts','AutoApiTestRunner'
+# EASY-INSTALL-ENTRY-SCRIPT: 'AutoApiTestRunner','console_scripts','auto'
 __requires__ = 'AutoApiTestRunner'
 import re
 import sys
@@ -8,5 +8,5 @@ from pkg_resources import load_entry_point
 if __name__ == '__main__':
     sys.argv[0] = re.sub(r'(-script\.pyw?|\.exe)?$', '', sys.argv[0])
     sys.exit(
-        load_entry_point('AutoApiTestRunner', 'console_scripts', 'AutoApiTestRunner')()
+        load_entry_point('AutoApiTestRunner', 'console_scripts', 'auto')()
     )

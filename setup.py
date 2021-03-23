@@ -15,6 +15,6 @@ setup(
     ],
     entry_points='''
         [console_scripts]
-        AutoApiTestRunner=AutoApiTestRunner:cli
+        auto=auto:cli
     '''
 )
